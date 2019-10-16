@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <!-- 
+        1) we want to create the structure of the calculator
+        2) we want add the style for the calculator
+        3) we want to add the behaviour
+            - +, -, / , *
+            - C => reset the calc
+            - = => to get result
+
+        [   result
+            7 8 9 +
+            4 5 6 -
+            1 2 3 *
+            C 0 = / ]
+     -->
+
+    <div id="calculator">
+      <table>
+        <tr>
+          <td colspan="4">
+            <input type="number" value="0" id="result" />
+          </td>
+        </tr>
+        <tr>
+          <td><input type="button" value="7" /></td>
+          <td><input type="button" value="8" /></td>
+          <td><input type="button" value="9" /></td>
+          <td><input type="button" value="+" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" /></td>
+          <td><input type="button" value="5" /></td>
+          <td><input type="button" value="6" /></td>
+          <td><input type="button" value="-" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="1" /></td>
+          <td><input type="button" value="2" /></td>
+          <td><input type="button" value="3" /></td>
+          <td><input type="button" value="*" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="C" /></td>
+          <td><input type="button" value="0" /></td>
+          <td><input type="button" value="=" /></td>
+          <td><input type="button" value="/" /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
