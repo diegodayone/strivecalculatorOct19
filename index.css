@@ -3,12 +3,21 @@ body{
     color:white;
 }
 
+.errorMessage{
+    display:none;
+    background: #ef3d59;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
 /* THIS IS FOR CENTER IN THE MIDDLE OF THE SCREEN */
 #calculator{
     height: 100vh;
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 /* Only the buttons */

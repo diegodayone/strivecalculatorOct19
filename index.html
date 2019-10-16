@@ -26,6 +26,9 @@
      -->
 
     <div id="calculator">
+      <div class="errorMessage" >
+
+      </div>
       <table>
         <tr>
           <td colspan="4">
@@ -86,6 +89,9 @@
             var result = document.querySelector("#result")
             var actualValue = parseFloat(result.value); //we need to convert the string to a number!!!
 
+
+            var errorMessage = document.querySelector(".errorMessage");
+            errorMessage.style.display = "none"
             // if (pressedButton == "="){
             // } else if (pressedButton == "C"){
             // } else{ //in all other cases 
@@ -113,7 +119,13 @@
                             previousResult *= actualValue;
                             break;
                         case "/":
-                            previousResult /= actualValue;
+                            if (actualValue === 0){
+                                errorMessage.innerText = "Cannot divide by 0"
+                                errorMessage.style.display = "block"
+                                previousResult = 0;
+                            }
+                            else
+                                previousResult /= actualValue;
                             break;
                     }
                     // 2) i have to update the result
