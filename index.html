@@ -13,9 +13,10 @@
         1) [DONE] we want to create the structure of the calculator
         2) [DONE] we want add the style for the calculator
         3) [TODO] we want to add the behaviour
-            - +, -, / , *
-            - C => reset the calc
-            - = => to get result
+            a) [DONE] 0-9 to add something in the result pane
+            b) +, -, / , *
+            c) C => reset the calc
+            d) = => to get result
 
         [   result
             7 8 9 +
@@ -23,7 +24,7 @@
             1 2 3 *
             C 0 = / ]
      -->
-     
+
     <div id="calculator">
       <table>
         <tr>
@@ -57,5 +58,47 @@
         </tr>
       </table>
     </div>
+
+    <script>
+
+        function numericButtonClick(event){
+            var number = event.currentTarget.value; //take the value of the button as number
+            //1) get a reference to result
+            //var result = document.getElementById("result")
+            var result = document.querySelector("#result")
+            //2) add the number to result
+            if (result.value == "0")
+                result.value = number
+            else
+                result.value += number; //string concatenation between result content and the new number
+        }
+
+        function specialButtonClick(event){
+            //we have to take care of:
+            // b) +, -, / , *
+            // c) C => reset the calc
+            // d) = => to get result
+
+            var pressedButton = event.currentTarget.value;
+            console.log(pressedButton);
+
+        }
+
+        window.onload = function(){ //when the page loads
+            //get a reference to all the numericButton
+            // var numericButtons = document.getElementsByClassName("numberButton")
+            var numericButtons = document.querySelectorAll(".numericButton");
+            //wire a onclick event to them
+            for (var i = 0; i < numericButtons.length; i ++) { //go through all the buttons in the page
+                var selectedButton = numericButtons[i]; //get the current button
+                selectedButton.onclick = numericButtonClick; //this will wire up the onclick event => addNumber
+            }
+
+            var specialButtons = document.querySelectorAll(".specialButton") //select all the special buttons
+            for (var i = 0; i < specialButtons.length; i ++) //go throught all the special buttons
+                specialButtons[i].onclick = specialButtonClick; //wire on click the specialButtonClick function
+        }
+
+    </script>
   </body>
 </html>
