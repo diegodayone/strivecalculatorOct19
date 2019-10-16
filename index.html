@@ -10,9 +10,9 @@
   <body>
     <!-- 
         This is what we want to achieve
-        1) we want to create the structure of the calculator
-        2) we want add the style for the calculator
-        3) we want to add the behaviour
+        1) [DONE] we want to create the structure of the calculator
+        2) [DONE] we want add the style for the calculator
+        3) [TODO] we want to add the behaviour
             - +, -, / , *
             - C => reset the calc
             - = => to get result
@@ -23,7 +23,7 @@
             1 2 3 *
             C 0 = / ]
      -->
-
+     
     <div id="calculator">
       <table>
         <tr>
@@ -32,28 +32,28 @@
           </td>
         </tr>
         <tr>
-          <td><input type="button" value="7" /></td>
-          <td><input type="button" value="8" /></td>
-          <td><input type="button" value="9" /></td>
-          <td><input type="button" value="+" /></td>
+          <td><input type="button" class="numericButton" value="7" /></td>
+          <td><input type="button" class="numericButton" value="8" /></td>
+          <td><input type="button" class="numericButton" value="9" /></td>
+          <td><input type="button" class="specialButton" value="+" /></td>
         </tr>
         <tr>
-          <td><input type="button" value="4" /></td>
-          <td><input type="button" value="5" /></td>
-          <td><input type="button" value="6" /></td>
-          <td><input type="button" value="-" /></td>
+          <td><input type="button" class="numericButton" value="4" /></td>
+          <td><input type="button" class="numericButton" value="5" /></td>
+          <td><input type="button" class="numericButton" value="6" /></td>
+          <td><input type="button" class="specialButton" value="-" /></td>
         </tr>
         <tr>
-          <td><input type="button" value="1" /></td>
-          <td><input type="button" value="2" /></td>
-          <td><input type="button" value="3" /></td>
-          <td><input type="button" value="*" /></td>
+          <td><input type="button" class="numericButton" value="1" /></td>
+          <td><input type="button" class="numericButton" value="2" /></td>
+          <td><input type="button" class="numericButton" value="3" /></td>
+          <td><input type="button" class="specialButton" value="*" /></td>
         </tr>
         <tr>
-          <td><input type="button" value="C" /></td>
-          <td><input type="button" value="0" /></td>
-          <td><input type="button" value="=" /></td>
-          <td><input type="button" value="/" /></td>
+          <td><input type="button" class="specialButton" value="C" /></td>
+          <td><input type="button" class="numericButton" value="0" /></td>
+          <td><input type="button" class="specialButton" value="=" /></td>
+          <td><input type="button" class="specialButton" value="/" /></td>
         </tr>
       </table>
     </div>
